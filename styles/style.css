@@ -16,7 +16,7 @@ body {
     font-size: 1.6rem;
     background-image: url('../images/bg.jpg');
     background-repeat: no-repeat;
-    background-size: auto;        
+    background-size: cover;        
 }
 
 button {
