@@ -1,6 +1,7 @@
 const noteTitle = document.querySelector('#note-title')
 const noteBody = document.querySelector('#note-body')
 const removeBtn = document.querySelector('#remove-note')
+const addBtn = document.querySelector('#add-note')
 const dateElement = document.querySelector('#last-edited')
 const noteId = location.hash.substring(1)
 let notes = getSavedNotes()
@@ -30,6 +31,11 @@ noteBody.addEventListener('input', (e) => {
 
 removeBtn.addEventListener('click', () => {
     removeNote(noteId)
+    saveNotes(notes)
+    location.assign('/note/index.html')
+})
+
+addBtn.addEventListener('click', () => {
     saveNotes(notes)
     location.assign('/note/index.html')
 })
